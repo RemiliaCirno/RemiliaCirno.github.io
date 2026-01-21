@@ -1,20 +1,91 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image" href="/assets/1.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Music</title>
-  <script type="module" crossorigin src="/assets/index-BrNrzPEq.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DRW8556u.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安装 Minecraft PE 0.16.2</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .install-btn {
+      display: inline-block;
+      background-color: #007AFF;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0;
+      transition: background-color 0.3s;
+    }
+
+    .install-btn:hover {
+      background-color: #0056CC;
+    }
+
+    .note {
+      color: #666;
+      font-size: 14px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    .warning {
+      color: #FF3B30;
+      background-color: #FFEEED;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: left;
+    }
+  </style>
 </head>
 
 <body>
-  <div>
-    <a href="itms-services://?action=download-manifest&url=https://RemiliaCirno.github.io/info2.plist">111</a>
+  <h1>Minecraft PE 0.16.2</h1>
+  <img url="icon.png"></img>
+  <div class="warning">
+    <strong>注意：</strong>
+    <p>1. 首次安装需要越狱安装appsync</p>
+    <p>2. 仅支持iOS 9.0及以上系统</p>
   </div>
+
+  <!-- 安装链接 -->
+  <a href="itms-services://?action=download-manifest&url=https://RemiliaCirno.github.io/manifest.plist"
+    class="install-btn">
+    🎮 安装 Minecraft PE 0.16.2
+  </a>
+
+  <div class="note">
+    <p>文件大小：89MB</p>
+    <p>版本：0.16.2 (Build 1)</p>
+    <p>支持设备：iPhone, iPad, iPod touch</p>
+  </div>
+
+  <script>
+    // 检测是否为iOS设备
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
+
+    // 如果不是iOS设备，显示提示
+    if (!isIOS() && !navigator.userAgent.includes('Mac')) {
+      document.querySelector('.install-btn').innerHTML = '⚠️ 请在iOS设备上访问此页面';
+      document.querySelector('.install-btn').style.backgroundColor = '#FF3B30';
+      document.querySelector('.install-btn').onclick = function (e) {
+        e.preventDefault();
+        alert('此安装页面仅适用于iOS设备');
+      };
+    }
+  </script>
 </body>
 
 </html>
