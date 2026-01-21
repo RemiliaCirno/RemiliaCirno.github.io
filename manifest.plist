@@ -13,7 +13,6 @@
                     <key>url</key>
                     <string>https://RemiliaCirno.github.io/MinecraftPE.ipa</string>
                 </dict>
-                <!-- 可选：添加应用图标 -->
                 <dict>
                     <key>kind</key>
                     <string>display-image</string>
@@ -30,13 +29,13 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.mojang.minecraftpe</string>
+                <string>com.mojang.minecraft</string>
                 <key>bundle-version</key>
                 <string>0.16.2</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>Minecraft PE</string>
+                <string>梁曼妮的世界</string>
                 <key>subtitle</key>
                 <string>Minecraft Pocket Edition</string>
             </dict>
